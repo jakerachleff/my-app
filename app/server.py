@@ -13,7 +13,7 @@ async def redirect_root_to_docs():
 # Edit this to add the chain you want to add
 from pirate_speak.chain import chain as pirate_speak_chain
 
-add_routes(app, pirate_speak_chain, path="/pirate-speak")
+add_routes(app, pirate_speak_chain, path="/pirate-speak", enable_feedback_endpoint=True)
 
 if __name__ == "__main__":
     import uvicorn
